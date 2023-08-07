@@ -1,34 +1,33 @@
 import React from "react";
-import styled from "styled-components";
 import { useState } from "react";
 import { Button } from "./styles/Form.styled"
 
 
 function Form({ bookSearch }) {
 
-    const [form, setForm] = useState({ searchTerm: "" })
+    const [form, setForm] = useState({ searchBookTerm: "" })
 
     const handleChange = (e) => {
         console.log(e.target.value)
         setForm({
             ...form,
-            searchTerm: e.target.value
+            searchBookTerm: e.target.value
         })
     }
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        bookSearch(form.searchTerm);  
-        form.searchTerm = "";
+        bookSearch(form.searchBookTerm);  
+        form.searchBookTerm = "";
     }
 
     return (
 
-        <form>
-            <input type="text" placeholder="Title" /> 
+        <form onSubmit={handleSubmit}>
+            <input type="text" placeholder="Title" value={form.searchBookTerm} onChange={handleChange} /> 
             <span> or </span> 
             <input type="text" placeholder="Author" />
-            <Button type="submit" value="Submit" />
+            <Button type="submit" value="Submit" onClick={bookSearch}> Search </Button>
         </form>
     )
 }

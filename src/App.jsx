@@ -21,7 +21,7 @@ function Books() {
       const response = await fetch(url, options);
       const data = await response.json();
 
-      console.log(data)
+      // console.log(data)
 
       setBook(data);
     } catch (error) {
@@ -38,7 +38,7 @@ function Books() {
   return (
     <>
       <h1>Books</h1>
-      <Form />
+      <Form bookSearch={getBook} />
     </>
   )
 }
