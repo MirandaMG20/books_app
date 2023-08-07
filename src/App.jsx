@@ -1,28 +1,29 @@
 import { useState, useEffect } from 'react'
 import Form from "./components/Form"
+import BookDisplay from './components/BookDisplay';
 
 
-function Books() {
+function App() {
 
   const [book, setBook] = useState(null);
 
-  const url = 'https://book-finder1.p.rapidapi.com/api/search?title=the%20notebook&author=Nicholas%20Sparks&book_type=Fiction&results_per_page=10&page=1';
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
-      'X-RapidAPI-Host': 'book-finder1.p.rapidapi.com'
-    }
-  };
-
   // Function to getBooks
   const getBook = async (searchBookTerm) => {
+    const url = `https://book-finder1.p.rapidapi.com/api/search?title=the%20notebook&author=Nicholas%20Sparks&page=1`;
+    //https://book-finder1.p.rapidapi.com/api/search?title=the%20notebook&author=Nicholas%20Sparks&results_per_page=2&page=1
+    //  title=${searchBookTerm}
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
+        'X-RapidAPI-Host': 'book-finder1.p.rapidapi.com'
+      }
+    };
+
     try {
       const response = await fetch(url, options);
       const data = await response.json();
-
       // console.log(data)
-
       setBook(data);
     } catch (error) {
       console.log(error);
@@ -31,7 +32,7 @@ function Books() {
 
   useEffect(() => {
     getBook("The Notebook");
-    console.log('useEffect is called')
+    // console.log('useEffect is called')
   }, []);
 
 
@@ -39,8 +40,9 @@ function Books() {
     <>
       <h1>Books</h1>
       <Form bookSearch={getBook} />
+      <BookDisplay book={book} />
     </>
   )
 }
 
-export default Books
+export default App

@@ -5,10 +5,12 @@ import { Button } from "./styles/Form.styled"
 
 function Form({ bookSearch }) {
 
-    const [form, setForm] = useState({ searchBookTerm: "" })
+    const [form, setForm] = useState({ 
+        searchBookTerm: "" 
+    })
 
     const handleChange = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value) //
         setForm({
             ...form,
             searchBookTerm: e.target.value
