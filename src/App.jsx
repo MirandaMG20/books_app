@@ -9,7 +9,7 @@ function App() {
 
   // Function to getBooks
   const getBook = async (searchBookTerm) => {
-    const url = `https://book-finder1.p.rapidapi.com/api/search?title=the%20notebook&author=Nicholas%20Sparks&page=1`;
+    const url = `https://book-finder1.p.rapidapi.com/api/search?title=the%20notebook&author=Nicholas%20Sparks&page=1&results_per_page=2`;
     //https://book-finder1.p.rapidapi.com/api/search?title=the%20notebook&author=Nicholas%20Sparks&results_per_page=2&page=1
     //  title=${searchBookTerm}
     const options = {

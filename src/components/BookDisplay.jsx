@@ -9,11 +9,11 @@ function BookDisplay({ book }) {
 
         return (
             <>
-                {/* <img src={ || "N/A"} alt={book.Title} /> */}
-
                 {book.results.map((bk) =>
                 (
-                    <div>
+                    <div key={bk.canonical_isbn}>
+                        
+                        <img src={bk.published_works[0].cover_art_url} alt="Book Cover" />
                         <h1>{bk.title}</h1>
                         <h1>{bk.authors}</h1>
                     </div>
