@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Form from "./components/Form"
 
 
 function Books() {
@@ -15,15 +16,14 @@ function Books() {
   };
 
   // Function to getBooks
-  const getBook = async (searchTerm) => {
-
+  const getBook = async (searchBookTerm) => {
     try {
       const response = await fetch(url, options);
       const data = await response.json();
 
       console.log(data)
 
-      // setBook(data);
+      setBook(data);
     } catch (error) {
       console.log(error);
     }
@@ -38,6 +38,7 @@ function Books() {
   return (
     <>
       <h1>Books</h1>
+      <Form />
     </>
   )
 }
