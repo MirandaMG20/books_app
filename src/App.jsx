@@ -40,8 +40,9 @@ function App() {
   return (
     <>
       <Header>
-        <Form bookSearch={getBook} />
+  
       </Header>
+      <Form bookSearch={getBook} />
       <BookDisplay book={book} />
     </>
   )

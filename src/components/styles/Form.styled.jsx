@@ -1,18 +1,27 @@
 import styled from "styled-components";
 
+
+// export const FormStyles = styled.form`
+// display: flex;
+// flex-direction: column;
+// place-items: center;
+// align-items: center;
+// `
+
 export const Button = styled.button`
-  border-radius: 50px;
+color: #0d0d0d;
   border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-  padding: 15px 60px;
-  // background-color: #fff;
-  // color: #333;
+  margin: 10px;
+  padding: 5px 10px;
+  background-color: #adadad;
+  box-shadow: 0 0 8px #939393;
 
   &:hover {
-    // opacity: 0.9;
-    transform: scale(0.98);
+    opacity: 0.9;
+    transform: scale(0.90);
+    background-color: #fff;
   }
 `
