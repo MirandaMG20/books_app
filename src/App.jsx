@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Header from "./components/Header"
 import Form from "./components/Form"
 import BookDisplay from './components/BookDisplay';
 
@@ -38,8 +39,9 @@ function App() {
 
   return (
     <>
-      <h1>Books</h1>
-      <Form bookSearch={getBook} />
+      <Header>
+        <Form bookSearch={getBook} />
+      </Header>
       <BookDisplay book={book} />
     </>
   )
