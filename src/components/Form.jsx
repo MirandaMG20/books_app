@@ -10,7 +10,7 @@ function Form({ bookSearch }) {
     })
 
     const handleChange = (e) => {
-        // console.log(e.target.value) //
+        // console.log(e.target.value)
         setForm({
             ...form,
             searchBookTerm: e.target.value
@@ -26,9 +26,18 @@ function Form({ bookSearch }) {
     return (
 
         <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Title" value={form.searchBookTerm} onChange={handleChange} /> 
+            <input 
+            type="text" 
+            placeholder="Title" 
+            value={form.searchBookTerm} 
+            onChange={handleChange} /> 
+            
             <span> or </span> 
-            <input type="text" placeholder="Author" />
+
+            <input 
+            type="text" 
+            placeholder="Author" />
+
             <Button type="submit" value="Submit" onClick={bookSearch}> Search </Button>
         </form>
     )
