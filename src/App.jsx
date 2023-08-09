@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import './index.css'
 import Form from "./components/Form"
 import BookDisplay from './components/BookDisplay';
 
@@ -34,13 +33,15 @@ function App() {
     // console.log('useEffect is called')
   }, []);
 
+const handleSelectedBook = (selectedBook) => {
+  console.log("Selected Book:", selectedBook);
+};
+
+
   return (
     <>
-
         <Form bookSearch={getBooks} />
-
-        <BookDisplay books={books} />
-
+        <BookDisplay books={books} onBookSelect={handleSelectedBook} />
     </>
   )
 }
