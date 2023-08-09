@@ -1,23 +1,24 @@
 import React from "react";
 import { useState } from 'react'
-import styled from "styled-components";
 import { StyledBookCard, Span, Img, Details } from "./styles/BookDisplay.styled";
 
 
-function BookDisplay({ books, onBookSelect }) {
+function BookDisplay({ books }) {
 
-    const [selectedBook, setSelectedBook] = useState("");
+    const [selectedBook, setSelectedBook] = useState(null);
 
     const handleCardClick = (book) => {
-        onBookSelect(book);
+       console.log(book)
         setSelectedBook(book);
     };
 
     const handleCloseOverlay = () => {
-        e.preventDefault();
-        setSelectedBook(null);
+        setSelectedBook("");
     };
 
+    // const handleSelectedBook = (selectedBook) => {
+    //     console.log("Selected Book:", selectedBook);
+    // };
 
     const loaded = () => {
 
@@ -26,7 +27,7 @@ function BookDisplay({ books, onBookSelect }) {
         return (
             <>
                 {books.results.map((book) => (
-                    <StyledBookCard key={book.canonical_isbn} onClick={handleCardClick}>
+                    <StyledBookCard key={book.canonical_isbn} onClick={()=>handleCardClick(book)}>
 
                         <Img src={book.published_works[0].cover_art_url} alt="Book Cover" />
 
@@ -42,12 +43,14 @@ function BookDisplay({ books, onBookSelect }) {
                         </Details>
 
                     </StyledBookCard>
+
+
                 ))}
 
                 {selectedBook && (
                     <div>
                         <div>
-                            <span>Summary: {book.summary || 'None'}</span>
+                            <p>Summary: {selectedBook.summary || 'None'}</p>
                             <button onClick={handleCloseOverlay}>Close</button>
                         </div>
                     </div>

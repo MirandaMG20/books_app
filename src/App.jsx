@@ -9,7 +9,7 @@ function App() {
 
   // Function to getBooks
   const getBooks = async (searchBookTerm) => {
-    const url = `https://book-finder1.p.rapidapi.com/api/search?title=${searchBookTerm}&author=Nicholas%20Sparks&page=1&results_per_page=20`;
+    const url = `https://book-finder1.p.rapidapi.com/api/search?title=${searchBookTerm}&page=1&results_per_page=20`;
     const options = {
       method: 'GET',
       headers: {
@@ -33,15 +33,11 @@ function App() {
     // console.log('useEffect is called')
   }, []);
 
-const handleSelectedBook = (selectedBook) => {
-  console.log("Selected Book:", selectedBook);
-};
-
 
   return (
     <>
         <Form bookSearch={getBooks} />
-        <BookDisplay books={books} onBookSelect={handleSelectedBook} />
+        <BookDisplay books={books}  />
     </>
   )
 }
