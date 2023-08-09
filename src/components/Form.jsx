@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Button } from "./styles/Form.styled"
+import { StyledHeader, StyledTitle } from "./styles/Header.styled";
 
 
 function Form({ bookSearch }) {
@@ -24,30 +25,36 @@ function Form({ bookSearch }) {
     }
 
     return (
+        <StyledHeader>
 
-        <form >
+            <StyledTitle>Books</StyledTitle>
+            
+            <form >
 
-            <input
-                type="text"
-                placeholder="Title"
-                value={form.searchBookTerm}
-                onChange={handleChange} />
+                <input
+                    type="text"
+                    placeholder="Title"
+                    value={form.searchBookTerm}
+                    onChange={handleChange} />
 
-            <br />
-            <span style={{color: "#0d0d0d"}}> or </span>
-            <br />
+                <br />
+                <span style={{ color: "#0d0d0d" }}> or </span>
+                <br />
 
-            <input
-                type="text"
-                placeholder="Author" />
-            <br />
+                <input
+                    type="text"
+                    placeholder="Author" />
+                <br />
 
-            <Button 
-            type="submit" 
-            value="Submit" 
-            onClick={handleClick}> Search </Button>
+                <Button
+                    type="submit"
+                    value="Submit"
+                    onClick={handleClick}> Search </Button>
 
-        </form>
+            </form>
+
+        </StyledHeader>
+
     )
 }
 
