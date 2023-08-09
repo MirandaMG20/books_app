@@ -1,6 +1,6 @@
 import React from "react";
 // import styled from "styled-components";
-import { StyledBookCard, Span, Details } from "./styles/BookDisplay.styled";
+import { StyledBookCard, Span, Img, Details } from "./styles/BookDisplay.styled";
 
 
 function BookDisplay({ books }) {
@@ -14,7 +14,7 @@ function BookDisplay({ books }) {
                 (
                     <StyledBookCard key={book.canonical_isbn}>
 
-                        <img src={book.published_works[0].cover_art_url} alt="Book Cover" />
+                        <Img src={book.published_works[0].cover_art_url} alt="Book Cover" />
 
                         <Details>
                             <h3>{book.title || book.title_search || 'None'}</h3>
@@ -28,8 +28,6 @@ function BookDisplay({ books }) {
                             {/* <br />
                             <Span>Summary: {book.summary || 'None'}</Span> */}
                         </Details>
-
-
 
                     </StyledBookCard>)
                 )}

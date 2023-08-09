@@ -9,7 +9,7 @@ The React Book Search App is a simple web application that allows users to searc
 - Uses local storage to save user's data within the browser.
 
 ## Usage
-1. Open a web browser and navigate to 
+1. Open a web browser and navigate to: 
 2. Use the search inputs to enter book title, and/or author's name to find matching books.
 3. Click the "Search" button to initiate the search.
 4. Results will be displayed below in a visually pleasing format.

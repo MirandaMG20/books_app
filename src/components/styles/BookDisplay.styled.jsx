@@ -10,14 +10,20 @@ width: 350px;
 margin: 40px;
 padding: 10px;
 
-img {
-    width: 100px;
-    height: 150px;
-    padding: 10px;
-    align-items: center;
-}
-
+// img {
+//     width: 100px;
+//     height: 150px;
+//     padding: 10px;
+//     align-items: center;
+// }
 `;
+
+export const Img = styled.img`
+width: 100px;
+height: 150px;
+padding: 10px;
+align-items: center;
+`
 
 export const Span = styled.span`
 color: #0d0d0d;
@@ -28,7 +34,8 @@ export const Details = styled.div`
 
 `
 
-
+// overflow: auto;
+// flex-wrap: nowrap
 // font-weight: 400;
 // place-items: center;
 // flex-direction: column;
