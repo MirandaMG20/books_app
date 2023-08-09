@@ -21,7 +21,7 @@ justify-content: space-evenly;
 
 export const StyledTitle = styled.h1`
 color: #939393;
-font-size: 140px;
+font-size: 130px;
 letter-spacing: 0.1em;
 padding-left: 15px;
 box-shadow:  5px 5px 20px #939393, 5px 5px 5px #c7c7c7;
