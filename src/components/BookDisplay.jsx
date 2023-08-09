@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from 'react'
-import { StyledBookCard, Span, Img, Details } from "./styles/BookDisplay.styled";
+import { StyledBookCard, Span, Img, Details, Overlay } from "./styles/BookDisplay.styled";
 
 
 function BookDisplay({ books }) {
@@ -8,7 +8,7 @@ function BookDisplay({ books }) {
     const [selectedBook, setSelectedBook] = useState(null);
 
     const handleCardClick = (book) => {
-       console.log(book)
+    //    console.log(book)
         setSelectedBook(book);
     };
 
@@ -48,12 +48,12 @@ function BookDisplay({ books }) {
                 ))}
 
                 {selectedBook && (
-                    <div>
+                    <Overlay>
                         <div>
                             <p>Summary: {selectedBook.summary || 'None'}</p>
                             <button onClick={handleCloseOverlay}>Close</button>
                         </div>
-                    </div>
+                    </Overlay>
                 )}
             </>
         );

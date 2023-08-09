@@ -10,6 +10,13 @@ width: 350px;
 margin: 40px;
 padding: 10px;
 
+&:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    transform: scale(0.90);
+    background-color: #939393;
+  }
+
 // img {
 //     width: 100px;
 //     height: 150px;
@@ -32,6 +39,18 @@ font-size: 13px;
 `
 export const Details = styled.div`
 
+`
+
+export const Overlay = styled.div`
+z-index: 100;
+position: fixed;
+align-items: center;
+top: 0;
+left: 0;
+padding: 15px;
+width: 70% !important; 
+height: 30% !important;
+background: #939393;
 `
 
 // overflow: auto;
