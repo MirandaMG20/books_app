@@ -6,23 +6,24 @@ font-family: Poppins, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 padding: 0;
 margin: 0 0 40px 0;
 width: 100%;
+height: 250px;
 background: #ffff;
 box-shadow: 5px 5px 15px #939393;
 display: flex;
+box-sizing: border-box;
 align-items: center;
 justify-content: space-evenly;
 
-@media (max-width: 900px) {
+@media (max-width: 750px) {
   flex-direction: column;
 }
-
 `
 
 export const StyledTitle = styled.h1`
 color: #939393;
-font-size: 150px;
-letter-spacing: 0.3em;
-padding: 0 15px 0 15px;
+font-size: 140px;
+letter-spacing: 0.1em;
+padding-left: 15px;
 box-shadow:  5px 5px 20px #939393, 5px 5px 5px #c7c7c7;
 `
 // box-sizing: border-box;

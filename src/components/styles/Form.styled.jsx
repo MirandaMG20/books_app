@@ -8,7 +8,6 @@ flex-direction: column;
 place-items: center;
 margin: 0;
 padding: 10px;
-
 `
 export const Span = styled.span`
 font-weight: 800;

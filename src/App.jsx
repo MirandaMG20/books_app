@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './index.css'
 import Form from "./components/Form"
 import BookDisplay from './components/BookDisplay';
 
@@ -9,7 +10,7 @@ function App() {
 
   // Function to getBooks
   const getBooks = async (searchBookTerm) => {
-    const url = `https://book-finder1.p.rapidapi.com/api/search?title=${searchBookTerm}&author=Nicholas%20Sparks&page=1&results_per_page=2`;
+    const url = `https://book-finder1.p.rapidapi.com/api/search?title=${searchBookTerm}&author=Nicholas%20Sparks&page=1&results_per_page=20`;
     const options = {
       method: 'GET',
       headers: {
@@ -36,9 +37,9 @@ function App() {
   return (
     <>
 
-      <Form bookSearch={getBooks} />
+        <Form bookSearch={getBooks} />
 
-      <BookDisplay books={books} />
+        <BookDisplay books={books} />
 
     </>
   )
