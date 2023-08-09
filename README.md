@@ -1,8 +1,23 @@
-# React + Vite
+# React BooksApp
+The React Book Search App is a simple web application that allows users to search for books by title, category, and/or author's name. It fetches book data from an external API and displays the results in a user-friendly interface.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Features
+- Search for books by title, category, and/or author's name.
+- Responsive search inputs and a search button.
+- Display of retrieved books in a visually appealing manner.
+- Fetches book data from an external API.
+- Uses local storage to save user's data within the browser.
 
-Currently, two official plugins are available:
+## Usage
+1. Open a web browser and navigate to 
+2. Use the search inputs to enter book title, and/or author's name to find matching books.
+3. Click the "Search" button to initiate the search.
+4. Results will be displayed below in a visually pleasing format.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Technologies Used
+- React
+- HTML
+- CSS
+- JavaScript
+- Fetch API
+- Local Storage

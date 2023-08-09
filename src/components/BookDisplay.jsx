@@ -6,7 +6,7 @@ import { StyledBookCard, Span, Details } from "./styles/BookDisplay.styled";
 function BookDisplay({ books }) {
     const loaded = () => {
 
-        console.log(books)
+        // console.log(books)
 
         return (
             <>
@@ -15,7 +15,7 @@ function BookDisplay({ books }) {
                     <StyledBookCard key={book.canonical_isbn}>
 
                         <img src={book.published_works[0].cover_art_url} alt="Book Cover" />
-                        
+
                         <Details>
                             <h3>{book.title || book.title_search || 'None'}</h3>
                             <Span>Author: {book.authors || book.author_last_names || 'None'}</Span>
@@ -25,9 +25,11 @@ function BookDisplay({ books }) {
                             <Span>Page Count: {book.published_works[0].page_count || 'None'}</Span>
                             <br />
                             <Span>Published: {book.copyright || book.published_works[0].copyright || 'None'}</Span>
+                            {/* <br />
+                            <Span>Summary: {book.summary || 'None'}</Span> */}
                         </Details>
 
-                        <Span>Summary: {book.summary || 'None'}</Span>
+
 
                     </StyledBookCard>)
                 )}
