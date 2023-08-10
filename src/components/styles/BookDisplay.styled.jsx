@@ -59,10 +59,15 @@ width: 70% !important;
 // height: 30% !important;
 background: #939393;
 display: flex;
-flex-direction: column;
 opacity: 95%;
 box-shadow: 0 0 10px #ffff;
 `
+export const Info = styled.div`
+display: flex;
+align-items: center;
+flex-direction: column;
+`
+
 export const Summary = styled.p`
 color: black;
 font-weight: 500;
@@ -75,7 +80,6 @@ border: none;
 cursor: pointer;
 font-size: 15px;
 font-weight: 800;
-margin: 10px;
 padding: 5px 10px;
 background-color: #ffff;
 box-shadow: 0 0 8px ;

@@ -48,7 +48,7 @@ width: 150px;
 padding: 10px;
 border: none;
 box-shadow: 0 0 8px ;
-
+text-align: center;  
 `
 
 export const Button = styled.button`
@@ -67,11 +67,11 @@ i {
   font-size: 15px;
 }
 
-  &:hover {
-    opacity: 0.9;
-    transform: scale(0.90);
-    background-color: #939393;
-  }
+&:hover {
+  opacity: 0.9;
+  transform: scale(0.90);
+  background-color: #939393;
+}
 `
 
 export const BookIcon = styled.span`
@@ -85,7 +85,6 @@ line-height: 1.5;
 display: flex;
 place-items: center;
 flex-direction: column;
-
 
 // Making the animation move back and forth
 h2 {
