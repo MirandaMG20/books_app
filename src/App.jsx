@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Header from "./components/Header"
 import BookDisplay from './components/BookDisplay';
-
+import Footer from './components/Footer';
 
 function App() {
 
@@ -38,6 +38,7 @@ function App() {
     <>
         <Header bookSearch={getBooks} />
         <BookDisplay books={books}  />
+        <Footer />
     </>
   )
 }

@@ -13,7 +13,7 @@ align-items: center;
 background-color: #ffff;
 box-shadow: 0 0 5px #ffff;
 width: 350px;
-margin: 40px;
+margin: 25px;
 padding: 10px;
 
 &:hover {
@@ -32,19 +32,19 @@ padding: 10px;
 `;
 
 export const Img = styled.img`
-width: 100px;
+width: 120px;
 height: 150px;
 padding: 10px;
 align-items: center;
 `
 
+export const Details = styled.div`
+line-height: 1.5;
+`
+
 export const Span = styled.span`
 color: #0d0d0d;
 font-size: 15px;
-
-`
-export const Details = styled.div`
-
 `
 
 export const Overlay = styled.div`

@@ -46,7 +46,7 @@ function Header({ bookSearch }) {
             </FormStyles>
 
             <Quote>
-                <BookIcon><i class="fas fa-book-open"></i></BookIcon>
+                <BookIcon><i class="fas fa-book-reader fa-2x"></i></BookIcon>
                 <h2 style={{ color: "#939393" }}>Reading is a magical getaway!</h2>
             </Quote>
 

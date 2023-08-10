@@ -70,16 +70,37 @@ box-shadow: 0 0 8px ;
 `
 
 export const BookIcon = styled.span`
-font-size: 70px;
+font-size: 40px;
 color: #939393
 `
 
 export const Quote = styled.div`
 font-style: italic;
-line-height: 1;
+line-height: 1.5;
 display: flex;
 place-items: center;
 flex-direction: column;
+
+
+// Making the animation move back and forth
+h2 {
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-right: -80%;
+    width: 100%;
+  }
+
+  to {
+    margin-right: 30%;
+    width: 100%;
+  }
+}
 `
 
 // align-items: center;
