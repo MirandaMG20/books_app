@@ -25,15 +25,15 @@ box-shadow: 0 0 8px ;
 
 export const Button = styled.button`
 font: inherit;
-  color: #0d0d0d;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 800;
-  margin: 10px;
-  padding: 5px 10px;
-  background-color: #ffff;
-  box-shadow: 0 0 8px ;
+color: #0d0d0d;
+border: none;
+cursor: pointer;
+font-size: 15px;
+font-weight: 800;
+margin: 10px;
+padding: 5px 10px;
+background-color: #ffff;
+box-shadow: 0 0 8px ;
 
   &:hover {
     opacity: 0.9;

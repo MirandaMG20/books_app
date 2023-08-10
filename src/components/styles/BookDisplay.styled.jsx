@@ -48,11 +48,43 @@ align-items: center;
 top: 0;
 left: 0;
 padding: 15px;
+margin: 400px 300px;
 width: 70% !important; 
-height: 30% !important;
+// height: 30% !important;
 background: #939393;
+display: flex;
+flex-direction: column;
+opacity: 95%;
+box-shadow: 0 0 10px #ffff;
+`
+export const Summary = styled.p`
+color: black;
+font-weight: 500;
+text-align: center;
+`
+export const Button = styled.button`
+font: inherit;
+color: #0d0d0d;
+border: none;
+cursor: pointer;
+font-size: 15px;
+font-weight: 800;
+margin: 10px;
+padding: 5px 10px;
+background-color: #ffff;
+box-shadow: 0 0 8px ;
+
+  &:hover {
+    opacity: 0.9;
+    transform: scale(0.90);
+    background-color: #939393;
+  }
 `
 
+// opacity: 0.9;
+// display: flex;
+// justify-content: center;
+// align-items: center;
 // overflow: auto;
 // flex-wrap: nowrap
 // font-weight: 400;

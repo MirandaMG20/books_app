@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from 'react'
-import { StyledBookCard, Span, Img, Details, Overlay } from "./styles/BookDisplay.styled";
+import { StyledBookCard, Span, Img, Details, Overlay, Summary, Button } from "./styles/BookDisplay.styled";
 
 
 function BookDisplay({ books }) {
@@ -8,7 +8,7 @@ function BookDisplay({ books }) {
     const [selectedBook, setSelectedBook] = useState(null);
 
     const handleCardClick = (book) => {
-    //    console.log(book)
+        //    console.log(book)
         setSelectedBook(book);
     };
 
@@ -27,7 +27,7 @@ function BookDisplay({ books }) {
         return (
             <>
                 {books.results.map((book) => (
-                    <StyledBookCard key={book.canonical_isbn} onClick={()=>handleCardClick(book)}>
+                    <StyledBookCard key={book.canonical_isbn} onClick={() => handleCardClick(book)}>
 
                         <Img src={book.published_works[0].cover_art_url} alt="Book Cover" />
 
@@ -49,10 +49,8 @@ function BookDisplay({ books }) {
 
                 {selectedBook && (
                     <Overlay>
-                        <div>
-                            <p>Summary: {selectedBook.summary || 'None'}</p>
-                            <button onClick={handleCloseOverlay}>Close</button>
-                        </div>
+                        <Summary>Summary: {selectedBook.summary || 'None'}</Summary>
+                        <Button onClick={handleCloseOverlay}>Close</Button>
                     </Overlay>
                 )}
             </>
