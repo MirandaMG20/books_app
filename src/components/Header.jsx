@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { StyledHeader, StyledTitle, FormStyles, Button, Span, Input } from "./styles/Header.styled"
+import { StyledHeader, StyledTitle, FormStyles, Button, Span, Input, Quote, BookIcon } from "./styles/Header.styled"
 
 
 function Header({ bookSearch }) {
@@ -45,7 +45,10 @@ function Header({ bookSearch }) {
 
             </FormStyles>
 
-            <h2 style={{ color: "#939393" }}>Reading is a magical getaway!</h2>
+            <Quote>
+                <BookIcon><i class="fas fa-book-open"></i></BookIcon>
+                <h2 style={{ color: "#939393" }}>Reading is a magical getaway!</h2>
+            </Quote>
 
         </StyledHeader>
     )

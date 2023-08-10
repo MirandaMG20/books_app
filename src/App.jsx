@@ -9,7 +9,7 @@ function App() {
 
   // Function to getBooks
   const getBooks = async (searchBookTerm) => {
-    const url = `https://book-finder1.p.rapidapi.com/api/search?title=${searchBookTerm}&page=1&results_per_page=20`;
+    const url = `https://book-finder1.p.rapidapi.com/api/search?title=${searchBookTerm}&page=1&results_per_page=25`;
     const options = {
       method: 'GET',
       headers: {

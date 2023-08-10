@@ -3,16 +3,16 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.div`
 font-family: Poppins, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-padding: 0;
+padding: 30px;
 margin: 0 0 40px 0;
 width: 100%;
-height: 250px;
+height: auto;
 background: #ffff;
-box-shadow: 5px 5px 15px #939393;
 display: flex;
 box-sizing: border-box;
 align-items: center;
 justify-content: space-evenly;
+box-shadow: 5px 5px 15px #939393;
 
 @media (max-width: 750px) {
   flex-direction: column;
@@ -30,8 +30,8 @@ box-shadow:  5px 5px 20px #939393, 5px 5px 5px #c7c7c7;
 export const FormStyles = styled.form`
 font-family: Poppins, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 display: flex;
-flex-direction: column;
 place-items: center;
+flex-direction: column;
 margin: 0;
 padding: 10px;
 `
@@ -67,6 +67,19 @@ box-shadow: 0 0 8px ;
     transform: scale(0.90);
     background-color: #939393;
   }
+`
+
+export const BookIcon = styled.span`
+font-size: 70px;
+color: #939393
+`
+
+export const Quote = styled.div`
+font-style: italic;
+line-height: 1;
+display: flex;
+place-items: center;
+flex-direction: column;
 `
 
 // align-items: center;
