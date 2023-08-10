@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+background-color: #242424;
+`
+
+
 export const StyledBookCard = styled.div`
 display: flex;
 font-family: Poppins, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

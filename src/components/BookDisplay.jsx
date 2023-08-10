@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from 'react'
-import { StyledBookCard, Span, Img, Details, Overlay, Summary, Button } from "./styles/BookDisplay.styled";
+import { StyledBookCard, Span, Img, Details, Overlay, Summary, Button, Container } from "./styles/BookDisplay.styled";
 
 
 function BookDisplay({ books }) {
@@ -25,7 +25,9 @@ function BookDisplay({ books }) {
         // console.log(books)
 
         return (
-            <>
+
+            <Container className="d-flex flex-wrap">
+
                 {books.results.map((book) => (
                     <StyledBookCard key={book.canonical_isbn} onClick={() => handleCardClick(book)}>
 
@@ -43,25 +45,24 @@ function BookDisplay({ books }) {
                         </Details>
 
                     </StyledBookCard>
-
-
                 ))}
-
                 {selectedBook && (
                     <Overlay>
-                        <Summary>Summary: {selectedBook.summary || 'None'}</Summary>
+                        <h3> Summary: </h3>
+                        <Summary>{selectedBook.summary || 'None'}</Summary>
                         <Button onClick={handleCloseOverlay}>Close</Button>
-                    </Overlay>
+                    </Overlay >
                 )}
-            </>
+                
+            </Container>
         );
     };
 
-    const loading = () => {
-        return <h1>No books found... </h1>;
-    };
+const loading = () => {
+    return <h1>No books found... </h1>;
+};
 
-    return books ? loaded() : loading();
+return books ? loaded() : loading();
 }
 
 export default BookDisplay;
