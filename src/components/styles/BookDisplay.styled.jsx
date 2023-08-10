@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 background-color: #242424;
+justify-content: center;
 `
 
 
@@ -39,7 +40,7 @@ align-items: center;
 
 export const Span = styled.span`
 color: #0d0d0d;
-font-size: 13px;
+font-size: 15px;
 
 `
 export const Details = styled.div`

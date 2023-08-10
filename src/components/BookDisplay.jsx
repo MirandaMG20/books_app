@@ -34,7 +34,7 @@ function BookDisplay({ books }) {
                         <Img src={book.published_works[0].cover_art_url} alt="Book Cover" />
 
                         <Details>
-                            <h3>{book.title || book.title_search || 'None'}</h3>
+                            <h5 style={{ color: "#0d0d0d" }}>{book.title || book.title_search || 'None'}</h5>
                             <Span>Author: {book.authors || book.author_last_names || 'None'}</Span>
                             <br />
                             <Span>Categories: {book.subcategories[0] || book.categories[0] || 'None'}</Span>
@@ -48,21 +48,21 @@ function BookDisplay({ books }) {
                 ))}
                 {selectedBook && (
                     <Overlay>
-                        <h3> Summary: </h3>
+                        <h3 style={{ color: "#0d0d0d" }}> Summary: </h3>
                         <Summary>{selectedBook.summary || 'None'}</Summary>
                         <Button onClick={handleCloseOverlay}>Close</Button>
                     </Overlay >
                 )}
-                
+
             </Container>
         );
     };
 
-const loading = () => {
-    return <h1>No books found... </h1>;
-};
+    const loading = () => {
+        return <h1>No books found... </h1>;
+    };
 
-return books ? loaded() : loading();
+    return books ? loaded() : loading();
 }
 
 export default BookDisplay;
