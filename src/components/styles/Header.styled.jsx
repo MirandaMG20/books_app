@@ -48,6 +48,7 @@ width: 150px;
 padding: 10px;
 border: none;
 box-shadow: 0 0 8px ;
+
 `
 
 export const Button = styled.button`
@@ -55,12 +56,16 @@ font: inherit;
 color: #0d0d0d;
 border: none;
 cursor: pointer;
-font-size: 15px;
 font-weight: 800;
 margin: 10px;
-padding: 5px 10px;
+padding: 5px 13px;
+Border-radius: 50%;
 background-color: #ffff;
 box-shadow: 0 0 8px ;
+
+i {
+  font-size: 15px;
+}
 
   &:hover {
     opacity: 0.9;

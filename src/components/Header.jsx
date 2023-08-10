@@ -30,18 +30,20 @@ function Header({ bookSearch }) {
 
             <FormStyles >
 
-                <Span style={{ color: "#0d0d0d" }}> Title: </Span>
+                <Span style={{ color: "#0d0d0d" }}> Title or Author </Span>
 
                 <Input
                     type="text"
-                    placeholder=""
+                    placeholder="Search"
                     value={form.searchBookTerm}
-                    onChange={handleChange} />
+                    onChange={handleChange}></Input>
 
                 <Button
                     type="submit"
                     value="Submit"
-                    onClick={handleClick}> Search </Button>
+                    onClick={handleClick}>
+                    <i class="fa fa-search"></i>
+                </Button>
 
             </FormStyles>
 
