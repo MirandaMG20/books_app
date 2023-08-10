@@ -10,7 +10,7 @@ function App() {
 
   // Function to fetch books based on the search term
   const getBooks = async (searchBookTerm) => {
-    // API endpoint URL with the search term
+    // API endpoint URL with the search term we use a "template literals" ${}
     const url = `https://book-finder1.p.rapidapi.com/api/search?title=${searchBookTerm}&page=1&results_per_page=25`;
     const options = {
       method: 'GET',
