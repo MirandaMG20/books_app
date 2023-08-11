@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const Container = styled.div`
 background-color: #242424;
 justify-content: center;
+overflow: hidden;
 `
 
 export const StyledBookCard = styled.div`
@@ -45,7 +46,7 @@ display: flex;
 place-items: center;
 flex-direction: column;
 text-align: center;
-line-height: 0.8;
+line-height: 1.3;
 `
 
 // export const BookTitles =styled.h5`
@@ -64,7 +65,6 @@ Border-radius: 50%;
 background-color: #ffff;
 box-shadow: 0 0 8px ;
 
-
 &:hover {
   opacity: 5;
   transform: scale(0.90);
@@ -73,7 +73,12 @@ box-shadow: 0 0 8px ;
   i:hover {
     color: #df0c0c;
     -webkit-text-stroke-width: 4px; 
-  }
+    
+    &::after {
+    content: ❤
+    // font-weight: bolder;
+    color: #df0c0c;
+  }  
 }
 `
 
@@ -84,16 +89,15 @@ font-size: 15px;
 
 export const Overlay = styled.div`
 z-index: 100;
+display: flex;
 position: fixed;
 align-items: center;
-top: 0;
-left: 0;
+// justify-content: center;
+margin: 20px 300px;
 padding: 15px;
-margin: 400px 350px;
 width: auto !important; 
-// height: 30% !important;
+height: auto !important;
 background: #939393;
-display: flex;
 opacity: 95%;
 box-shadow: 0 0 10px #ffff;
 `
