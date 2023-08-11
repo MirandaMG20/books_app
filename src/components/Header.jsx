@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 // import { Link } from "react-router-dom";
 
-import { StyledHeader, StyledTitle, FormStyles, Button, Span, Input, BookIcon, Quote, Fav } from "./styles/Header.styled"
+import { StyledHeader, StyledTitle, FormStyles, SearchBtn, Span, Input, BookIcon, Quote, FavBtn } from "./styles/Header.styled"
 
 
 // Defining the Header component which takes 'bookSearch' as a prop
@@ -55,12 +55,12 @@ function Header({ bookSearch }) {
                     onChange={handleChange}></Input>
 
                 {/* Search button */}
-                <Button
+                <SearchBtn
                     type="submit"
                     value="Submit"
                     onClick={handleClick}>
                     <i class="fa fa-search"></i>
-                </Button>
+                </SearchBtn>
 
             </FormStyles>
 
@@ -68,12 +68,12 @@ function Header({ bookSearch }) {
             <Quote>
                 <BookIcon><i class="fas fa-book-reader fa-2x"></i></BookIcon>
                 <h2 style={{ color: "#939393" }}>Reading is a magical getaway!</h2>
-                <Fav
+                <FavBtn
                     type="submit"
                     value="Submit"
                     onClick={handleClick}> Favorites {''}
                     <i className="fa fa-heart"></i>
-                </Fav>
+                </FavBtn>
                 {/* <Link to="/Favorites">Fav</Link> */}
             </Quote>
 

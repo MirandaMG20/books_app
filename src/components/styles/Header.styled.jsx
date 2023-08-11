@@ -51,7 +51,7 @@ box-shadow: 0 0 8px ;
 text-align: center;  
 `
 
-export const Button = styled.button`
+export const SearchBtn = styled.button`
 font: inherit;
 color: #0d0d0d;
 border: none;
@@ -107,7 +107,7 @@ h2 {
 }
 `
 
-export const Fav = styled.button`
+export const FavBtn = styled.button`
 color: #939393;
 border: none;
 cursor: pointer;

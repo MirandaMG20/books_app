@@ -1,20 +1,22 @@
 import styled from "styled-components";
 
+
 export const Container = styled.div`
 background-color: #242424;
 justify-content: center;
 `
 
-
 export const StyledBookCard = styled.div`
-display: flex;
 font-family: Poppins, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+display: flex;
 align-items: center;
+place-items: center;
+flex-direction: column;
 background-color: #ffff;
 box-shadow: 0 0 5px #ffff;
-width: 350px;
+width: 325px;
 margin: 25px;
-padding: 10px;
+padding: 5px;
 
 &:hover {
     opacity: 0.9;
@@ -39,7 +41,40 @@ align-items: center;
 `
 
 export const Details = styled.div`
-line-height: 1.5;
+display: flex;
+place-items: center;
+flex-direction: column;
+text-align: center;
+line-height: 0.8;
+`
+
+// export const BookTitles =styled.h5`
+// text-align: center;
+// `
+
+export const PlusBtn = styled.button`
+font: inherit;
+color: #0d0d0d;
+border: none;
+cursor: pointer;
+font-weight: 800;
+margin: 15px 0 5px;
+padding: 5px 13px;
+Border-radius: 50%;
+background-color: #ffff;
+box-shadow: 0 0 8px ;
+
+
+&:hover {
+  opacity: 5;
+  transform: scale(0.90);
+  box-shadow: 0 0 8px #df0c0c;
+
+  i:hover {
+    color: #df0c0c;
+    -webkit-text-stroke-width: 4px; 
+  }
+}
 `
 
 export const Span = styled.span`
@@ -54,14 +89,15 @@ align-items: center;
 top: 0;
 left: 0;
 padding: 15px;
-margin: 400px 300px;
-width: 70% !important; 
+margin: 400px 350px;
+width: auto !important; 
 // height: 30% !important;
 background: #939393;
 display: flex;
 opacity: 95%;
 box-shadow: 0 0 10px #ffff;
 `
+
 export const Info = styled.div`
 display: flex;
 align-items: center;
@@ -73,16 +109,18 @@ color: black;
 font-weight: 500;
 text-align: center;
 `
-export const Button = styled.button`
+
+export const OverlayBtn = styled.button`
 font: inherit;
 color: #0d0d0d;
 border: none;
 cursor: pointer;
 font-size: 15px;
 font-weight: 800;
-padding: 5px 10px;
+padding: 5px 5px;
 background-color: #ffff;
 box-shadow: 0 0 8px ;
+z-index: 5;
 
   &:hover {
     opacity: 0.9;
