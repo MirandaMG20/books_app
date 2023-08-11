@@ -8,8 +8,6 @@ function BookDisplay({ books }) {
     // State to hold the selected book for overlay
     const [selectedBook, setSelectedBook] = useState(null);
 
-    
-
     // Function to handle card click and show overlay
     const handleCardClick = (book) => {
         //    console.log(book)
@@ -46,11 +44,11 @@ function BookDisplay({ books }) {
                             <Span>Categories: {book.subcategories[0] || book.categories[0] || 'None'}</Span>
                             <Span>Page Count: {book.published_works[0].page_count || 'None'}</Span>
                             <Span>Published: {book.copyright || book.published_works[0].copyright || 'None'}</Span>
-                        
+
                         </Details>
 
                         <PlusBtn>
-                            <i class="fa fa-plus"></i>
+                            <i className="fa fa-plus"></i>
                         </PlusBtn>
 
                     </StyledBookCard>
@@ -61,7 +59,7 @@ function BookDisplay({ books }) {
                 {selectedBook && (
                     <Overlay>
                         <Info>
-                        <Img src={selectedBook.published_works[0].cover_art_url} alt="Book Cover" />
+                            <Img src={selectedBook.published_works[0].cover_art_url} alt="Book Cover" />
                             <h4 style={{ color: "#0d0d0d" }}> Summary: </h4>
                             {/* Displaying book summary */}
                             <Summary>{selectedBook.summary || 'None'}</Summary>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const FavButton = styled.div`
+export const Fav = styled.div`
 
 `

@@ -90,8 +90,8 @@ flex-direction: column;
 h2 {
   animation-duration: 5s;
   animation-name: slidein;
-  animation-iteration-count: infinite;
   animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
 @keyframes slidein {
@@ -99,7 +99,6 @@ h2 {
     margin-right: -80%;
     width: 100%;
   }
-
   to {
     margin-right: 30%;
     width: 100%;
@@ -122,14 +121,14 @@ place-items: center;
 flex-direction: column;
 
 &:hover {
-  opacity: 5;
+  // opacity: 5;
   transform: scale(0.90);
   box-shadow: 0 0 8px #df0c0c;
+}
 
-  i:hover {
-    color: #df0c0c;
-    -webkit-text-stroke-width: 4px; 
-  }
+i:hover {
+  color: #df0c0c;
+  -webkit-text-stroke-width: 4px; 
 }
 `
 

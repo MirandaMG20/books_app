@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 // import { Link } from "react-router-dom";
-
 import { StyledHeader, StyledTitle, FormStyles, SearchBtn, Span, Input, BookIcon, Quote, FavBtn } from "./styles/Header.styled"
 
 
@@ -59,14 +58,14 @@ function Header({ bookSearch }) {
                     type="submit"
                     value="Submit"
                     onClick={handleClick}>
-                    <i class="fa fa-search"></i>
+                    <i className="fa fa-search"></i>
                 </SearchBtn>
 
             </FormStyles>
 
             {/* Rendering the quote and book icon */}
             <Quote>
-                <BookIcon><i class="fas fa-book-reader fa-2x"></i></BookIcon>
+                <BookIcon><i className="fas fa-book-reader fa-2x"></i></BookIcon>
                 <h2 style={{ color: "#939393" }}>Reading is a magical getaway!</h2>
                 <FavBtn
                     type="submit"
