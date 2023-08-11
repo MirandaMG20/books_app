@@ -1,6 +1,8 @@
 // Importing necessary modules from React and custom components 
+// import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import Header from "./components/Header"
+// import Favorites from './components/pages/Favorites';
 import BookDisplay from './components/BookDisplay';
 import Footer from './components/Footer';
 
@@ -45,6 +47,11 @@ function App() {
     <>
       {/* Rendering the Header component and passing the getBooks function as a prop */}
       <Header bookSearch={getBooks} />
+      
+        {/* <Routes>
+          <Route path='/favorites' element={<Favorites />} />
+        </Routes> */}
+      
       {/* Rendering the BookDisplay component and passing the fetched book data as a prop */}
       <BookDisplay books={books} />
       {/* Rendering the Footer component */}

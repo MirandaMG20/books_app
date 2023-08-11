@@ -29,7 +29,7 @@ padding: 10px;
 //     padding: 10px;
 //     align-items: center;
 // }
-`;
+`
 
 export const Img = styled.img`
 width: 120px;
