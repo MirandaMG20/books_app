@@ -11,7 +11,7 @@ The React Book Search App is a simple web application that allows users to searc
 
 
 ## Usage
-1. Open a web browser and visit: https://warm-cocada-514bba.netlify.app/ 
+1. Open a web browser and visit: https://books-app-miranda.netlify.app/
 2. Use the search inputs to enter the book title and/or author's name to find matching books.
 3. Press "Enter" or click the "Search" button to initiate the search.
 4. The search results will be presented below in an aesthetically pleasing format.
