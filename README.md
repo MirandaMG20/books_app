@@ -33,7 +33,7 @@ The React Book Search App is a simple web application that allows users to searc
 - The routers are currently not functioning correctly; efforts are being made to resolve this issue.
 
 
-## Upgraded Updates
+## Future Updates
 - Implement functionality for the "Plus" button to select books.
 - Enable adding selected books to the user's favorites by clicking the "Plus" button.
 - Introduce a new page dedicated to listing "Favorite" books using routers.
