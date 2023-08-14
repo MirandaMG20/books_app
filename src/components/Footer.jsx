@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     
     <FooterStyled >
-        <p>Copyright &copy; 2023 - BooksApp</p>
+        <p>BooksApp &copy; 2023</p>
     </FooterStyled>
   )
 }
