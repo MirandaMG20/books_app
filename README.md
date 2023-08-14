@@ -8,7 +8,6 @@ The React Book Search App is a simple web application that allows users to searc
 - Responsive search inputs and a search button.
 - Display of retrieved books in a visually appealing manner.
 - Fetches book data from an external API.
-- Uses local storage to save user's data within the browser.
 
 
 ## Usage
@@ -30,6 +29,7 @@ The React Book Search App is a simple web application that allows users to searc
 
 
 ## Known Issues
+- "Favorites" list is not yet working.
 - The routers are currently not functioning correctly; efforts are being made to resolve this issue.
 
 
@@ -40,9 +40,8 @@ The React Book Search App is a simple web application that allows users to searc
 - Incorporate browser's Local Storage to store the "Favorites" list.
 
 
-Your contribution to the React Books App project is greatly appreciated! 
-Please feel free to report any issues or suggest improvements.
-
-
 ### Contact
 GitHub: https://github.com/MirandaMG20 
+
+Your contribution to the React Books App project is greatly appreciated! 
+Please feel free to report any issues or suggest improvements.
